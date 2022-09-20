@@ -1,0 +1,10 @@
+.wrapper {
+    margin: 1.5rem;
+}
+
+.add-button {
+    width: 620px;
+    height: 65px;
+
+    font-size: 1.5rem;
+}
