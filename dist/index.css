@@ -1,6 +1,10 @@
+*{box-sizing:border-box}body{margin:0}
+
 .src-wrapper___OEpks{width:1024px;min-height:1024px;background:#E1E1E1;display:flex;flex-direction:column;align-items:center}.src-nav-wrapper___rbDyk{width:100%;height:76px;background:#4A90E2}
 
 .src-components-AddTask-wrapper___QDnBp{margin:1.5rem}.src-components-AddTask-add-button___JDU6V{width:620px;height:65px;font-size:1.5rem}
 
-.src-components-Editor-header___Ny6GG{width:620px;height:65px;font-size:1.5rem}
+.src-components-Form-header___cDOva{width:620px;height:76px;padding:0 1.5rem;background:#F2F2F2;display:flex;justify-content:space-between;align-items:center}.src-components-Form-title___CKpj1{width:248px;height:28px;font-size:1.5rem}.src-components-Form-cancel___eP_wY,.src-components-Form-add-todo___g0r3_{width:310px;height:60px;border:0;font-size:1.5rem}.src-components-Form-cancel___eP_wY{background:#FFFFFF;color:#D0021B}.src-components-Form-add-todo___g0r3_{background:#4A90E2;color:#FFFFFF}
+
+.src-components-Todo-wrapper___U9E26{width:620px;height:76px;padding:0 1.5rem;margin:1.5rem;background:#F2F2F2;display:flex;justify-content:space-between;align-items:center}.src-components-Todo-title___i5mtE{width:248px;height:28px;font-size:1.5rem}
 

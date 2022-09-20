@@ -1,0 +1,46 @@
+.wrapper {}
+
+.header {
+  width: 620px;
+  height: 76px;
+
+  padding: 0 1.5rem;
+
+  background: #F2F2F2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  width: 248px;
+  height: 28px;
+
+  font-size: 1.5rem;
+}
+
+.footer {
+  /* width: 620px;
+  height: 30px; */
+}
+
+.cancel,
+.add-todo {
+  width: 310px;
+  height: 60px;
+
+  border: 0;
+
+  font-size: 1.5rem;
+}
+
+.cancel {
+  background: #FFFFFF;
+  color: #D0021B;
+}
+
+.add-todo {
+  background: #4A90E2;
+  color: #FFFFFF;
+}

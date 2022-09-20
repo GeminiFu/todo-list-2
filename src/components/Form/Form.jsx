@@ -4,8 +4,6 @@ import { TodoListContext } from '../../index.jsx'
 
 import styles from './index.css'
 
-
-
 const Editor = (props) => {
     const [todo, setTodo] = useState('')
 
@@ -13,9 +11,16 @@ const Editor = (props) => {
 
     return (
         <div className={styles['wrapper']}>
+
             <div className={styles['header']}>
-                <input type="text" placeholder='Type Something Here' onChange={e => { setTodo(e.target.value) }} />
+                <input
+                    className={styles['title']}
+                    type="text"
+                    placeholder='Type Something Here'
+                    onChange={e => { setTodo(e.target.value) }}
+                />
             </div>
+
             <div className={styles['footer']}>
                 <button
                     className={styles['cancel']}
