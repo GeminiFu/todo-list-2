@@ -1,11 +1,6 @@
-.src-body-wrapper___WyDqw {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center
-}
+.src-wrapper___OEpks{width:1024px;min-height:1024px;background:#E1E1E1;display:flex;flex-direction:column;align-items:center}.src-nav-wrapper___rbDyk{width:100%;height:76px;background:#4A90E2}
 
-.src-body___rEiO3 {
-    width: 50vw;
-    height: 100vw
-}
+.src-components-AddTask-wrapper___QDnBp{margin:1.5rem}.src-components-AddTask-add-button___JDU6V{width:620px;height:65px;font-size:1.5rem}
+
+.src-components-Editor-header___Ny6GG{width:620px;height:65px;font-size:1.5rem}
+

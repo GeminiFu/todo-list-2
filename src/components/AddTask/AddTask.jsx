@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import styles from './index.css'
 
+import Editor from '../Editor'
+
 const AddTask = () => {
     const [active, setActive] = useState(false)
 
@@ -13,9 +15,9 @@ const AddTask = () => {
         <div className={styles['wrapper']}>
             {(() => {
                 if (active) {
-                    <Editor setActive={setActive} />
+                    return <Editor setActive={setActive} />
                 } else {
-                    return <button className={styles['add-button']}>+ ADD</button>
+                    return <button className={styles['add-button']} onClick={() => { setActive(true) }}>+ ADD</button>
                 }
             })()}
 
