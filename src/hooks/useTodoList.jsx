@@ -1,4 +1,5 @@
 import React, { useReducer, useState } from 'react'
+import { TodoListContext } from '..'
 
 const useTodoList = () => {
     const initTodoList = [
@@ -41,8 +42,7 @@ const useTodoList = () => {
     function filt(filter) {
         switch (filter) {
             case 'ALL':
-                return importantSort(todoList)
-                break
+                return TodoListContext
             default:
                 throw 'filter error'
         }
@@ -64,7 +64,7 @@ const useTodoList = () => {
         return [...important, ...unimportant]
     }
 
-    const renderTodoList = filt(filter)
+    const renderTodoList = importantSort(filt(filter))
 
     return {
         renderTodoList,

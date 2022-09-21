@@ -13,6 +13,18 @@ const Todo = (props) => {
     <div className={styles['wrapper']}>
       <div className={styles['left']}>
         <input
+          type="checkbox"
+          className='completed'
+          checked={todo.completed}
+          onChange={e => {
+            todo.completed = e.target.checked
+            dispatch({
+              type: 'UPDATE',
+              payload: todo,
+            })
+          }}
+        />
+        <input
           type="text"
           className={styles['title']}
           value={todo.title}

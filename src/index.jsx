@@ -21,16 +21,16 @@ const App = () => {
 
     return (
         <div className={styles['wrapper']}>
-            <div className={styles['nav-wrapper']}></div>
             <TodoListContext.Provider value={{
                 renderTodoList,
                 dispatch,
                 setFilter,
             }}>
+                <div className={styles['nav-wrapper']}></div>
                 <AddTask />
                 <TodoList />
             </TodoListContext.Provider>
-        </div >
+        </div>
     )
 }
 
