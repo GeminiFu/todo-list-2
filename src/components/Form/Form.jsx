@@ -5,7 +5,12 @@ import { TodoListContext } from '../../index.jsx'
 import styles from './index.css'
 
 const Editor = (props) => {
-    const [todo, setTodo] = useState({})
+    const initTodo = {
+        title: '',
+        important: false,
+    }
+
+    const [todo, setTodo] = useState(initTodo)
 
     const { dispatch } = useContext(TodoListContext)
 
@@ -13,16 +18,25 @@ const Editor = (props) => {
         <div className={styles['wrapper']}>
 
             <div className={styles['header']}>
-                <input
-                    className={styles['title']}
-                    type="text"
-                    placeholder='Type Something Here'
-                    onChange={e => {
-                        setTodo({
-                            ...todo, title: e.target.value
-                        })
-                    }}
-                />
+                <div className={styles['header-left']}>
+                    <input
+                        type="text"
+                        className={styles['title']}
+                        placeholder='Type Something Here'
+                        onChange={e => {
+                            setTodo({
+                                ...todo, title: e.target.value
+                            })
+                        }}
+                    />
+                </div>
+                <div className={styles['header-right']}>
+                    <input
+                        type="checkbox"
+                        className='important'
+                        onChange={e => { setTodo({ ...todo, important: e.target.checked }) }}
+                    />
+                </div>
             </div>
 
             <div className={styles['footer']}>

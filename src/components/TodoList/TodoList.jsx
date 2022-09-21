@@ -9,6 +9,7 @@ import Todo from '../Todo'
 
 const TodoList = () => {
   const { renderTodoList } = useContext(TodoListContext)
+
   // TODO: filter
 
   return (
