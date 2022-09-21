@@ -2,9 +2,9 @@ import React, { useReducer, useState } from 'react'
 
 const useTodoList = () => {
     const initTodoList = [
-        { title: 'fake todo 1', important: false, id: 0 },
-        { title: 'fake todo 2', important: false, id: 1 },
-        { title: 'fake todo 3', important: false, id: 2 },
+        { completed: false, title: 'fake todo 1', important: false, id: 0 },
+        { completed: false, title: 'fake todo 2', important: false, id: 1 },
+        { completed: false, title: 'fake todo 3', important: false, id: 2 },
     ]
 
     const [todoList, dispatch] = useReducer(reducer, initTodoList)

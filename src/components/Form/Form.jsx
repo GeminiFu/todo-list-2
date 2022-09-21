@@ -4,8 +4,9 @@ import { TodoListContext } from '../../index.jsx'
 
 import styles from './index.css'
 
-const Editor = (props) => {
+const Form = (props) => {
     const initTodo = {
+        completed: false,
         title: '',
         important: false,
     }
@@ -19,6 +20,11 @@ const Editor = (props) => {
 
             <div className={styles['header']}>
                 <div className={styles['header-left']}>
+                    <input
+                        type="checkbox"
+                        className='completed'
+                        onChange={e => { setTodo({ ...todo, completed: e.target.checked }) }}
+                    />
                     <input
                         type="text"
                         className={styles['title']}
@@ -60,4 +66,4 @@ const Editor = (props) => {
     )
 }
 
-export default Editor
+export default Form

@@ -13,7 +13,9 @@ const TodoList = () => {
   // TODO: filter
 
   return (
-    renderTodoList.map((todo) => <Todo todo={todo} />)
+    renderTodoList.map((todo) => {
+      return <Todo todo={todo} />
+    })
   )
 }
 

@@ -5,10 +5,9 @@ import { TodoListContext } from '../../index.jsx'
 import styles from './index.css'
 
 const Todo = (props) => {
-  const [todo, setTodo] = useState(props.todo)
+  const todo = props.todo
 
   const { dispatch } = useContext(TodoListContext)
-
 
   return (
     <div className={styles['wrapper']}>
@@ -17,9 +16,8 @@ const Todo = (props) => {
           type="text"
           className={styles['title']}
           value={todo.title}
-          onChange={e => setTodo({ ...todo, title: e.target.value })}
-          onBlur={() => {
-            // TODO: even don't change value still re-render
+          onChange={e => {
+            todo.title = e.target.value
             dispatch({
               type: 'UPDATE',
               payload: todo,
@@ -31,7 +29,7 @@ const Todo = (props) => {
         <input
           type="checkbox"
           className='important'
-          value={todo.id}
+          checked={todo.important}
           onChange={e => {
             todo.important = e.target.checked
             dispatch({
