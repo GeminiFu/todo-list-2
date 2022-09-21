@@ -1,6 +1,6 @@
 *{box-sizing:border-box}body{margin:0}
 
-.src-wrapper___OEpks{width:1024px;min-height:1024px;background:#E1E1E1;display:flex;flex-direction:column;align-items:center}.src-nav-wrapper___rbDyk{width:100%;height:76px;background:#4A90E2}
+.src-wrapper___OEpks{max-width:1024px;min-width:620px;min-height:1024px;background:#E1E1E1;display:flex;flex-direction:column;align-items:center}.src-nav-wrapper___rbDyk{width:100%;height:76px;background:#4A90E2}
 
 .src-components-AddTask-wrapper___QDnBp{margin:1.5rem}.src-components-AddTask-add-button___JDU6V{width:620px;height:65px;font-size:1.5rem}
 

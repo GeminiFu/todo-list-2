@@ -5,9 +5,9 @@ import { TodoListContext } from '../../index.jsx'
 import styles from './index.css'
 
 const Editor = (props) => {
-    const [todo, setTodo] = useState('')
+    const [todo, setTodo] = useState({})
 
-    const { todoList, setTodoList } = useContext(TodoListContext)
+    const { dispatch } = useContext(TodoListContext)
 
     return (
         <div className={styles['wrapper']}>
@@ -17,7 +17,11 @@ const Editor = (props) => {
                     className={styles['title']}
                     type="text"
                     placeholder='Type Something Here'
-                    onChange={e => { setTodo(e.target.value) }}
+                    onChange={e => {
+                        setTodo({
+                            ...todo, title: e.target.value
+                        })
+                    }}
                 />
             </div>
 
@@ -29,11 +33,12 @@ const Editor = (props) => {
                 <button
                     className={styles['add-todo']}
                     onClick={() => {
+                        dispatch({
+                            type: 'ADD',
+                            payload: todo,
+                        })
+
                         props.setActive(false)
-                        setTodoList([
-                            ...todoList,
-                            { title: todo, id: todoList.length }
-                        ])
                     }}
                 >add todo</button>
             </div>

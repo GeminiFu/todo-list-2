@@ -8,11 +8,11 @@ import Todo from '../Todo'
 
 
 const TodoList = () => {
-  const { todoList } = useContext(TodoListContext)
+  const { renderTodoList } = useContext(TodoListContext)
   // TODO: filter
 
   return (
-    todoList.map((todo) => <Todo todo={todo} />)
+    renderTodoList.map((todo) => <Todo todo={todo} />)
   )
 }
 
