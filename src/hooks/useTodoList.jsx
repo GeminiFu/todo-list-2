@@ -1,5 +1,4 @@
 import React, { useReducer, useState } from 'react'
-import { TodoListContext } from '..'
 
 const useTodoList = () => {
     const initTodoList = [
@@ -42,7 +41,7 @@ const useTodoList = () => {
     function filt(filter) {
         switch (filter) {
             case 'ALL':
-                return TodoListContext
+                return todoList
             default:
                 throw 'filter error'
         }
