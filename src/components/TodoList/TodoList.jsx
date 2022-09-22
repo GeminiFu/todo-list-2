@@ -7,10 +7,10 @@ import { TodoListContext } from '../../index.jsx'
 import Todo from '../Todo'
 
 
-const TodoList = () => {
-  const { renderTodoList } = useContext(TodoListContext)
+const TodoList = (props) => {
+  const { renderTodoList, setFilter } = useContext(TodoListContext)
 
-  // TODO: filter
+  setFilter(props.filter)
 
   return (
     renderTodoList.map((todo) => {

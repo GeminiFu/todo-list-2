@@ -39,9 +39,25 @@ const useTodoList = () => {
     const [filter, setFilter] = useState('ALL')
 
     function filt(filter) {
+        const newTodoList = []
+
         switch (filter) {
             case 'ALL':
                 return todoList
+            case 'IN_PROGRESS':
+                todoList.forEach(todo => {
+                    if (!todo.completed) {
+                        newTodoList.push(todo)
+                    }
+                })
+                return newTodoList
+            case 'COMPLETED':
+                todoList.forEach(todo => {
+                    if (todo.completed) {
+                        newTodoList.push(todo)
+                    }
+                })
+                return newTodoList
             default:
                 throw 'filter error'
         }
@@ -64,6 +80,8 @@ const useTodoList = () => {
     }
 
     const renderTodoList = importantSort(filt(filter))
+
+    console.log('useTodoList renderTodoList is: ', renderTodoList)
 
     return {
         renderTodoList,
