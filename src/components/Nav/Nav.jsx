@@ -23,7 +23,7 @@ const Nav = () => {
                     onClick={() => {
                         setWhoActive(navName)
                     }} >
-                    {navName}
+                    <p>{navName}</p>
                 </Link>
             })}
         </div>

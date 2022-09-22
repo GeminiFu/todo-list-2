@@ -5,6 +5,13 @@
 .add-button {
     width: 620px;
     height: 65px;
+    padding: 0 1.5rem;
+    background: #FFFFFF;
+    border: 2px solid #C8C8C8;
+    border-radius: 5px;
 
-    font-size: 1.5rem;
+    font-family: Roboto-Regular;
+    font-size: 24px;
+    color: #C8C8C8;
+    text-align: left;
 }

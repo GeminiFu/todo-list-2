@@ -5,7 +5,8 @@ import styles from './index.css'
 import Form from '../Form'
 
 const AddTask = () => {
-    const [active, setActive] = useState(false)
+    // TODO: default false
+    const [active, setActive] = useState(true)
 
     return (
         <div className={styles['wrapper']}>
@@ -16,7 +17,7 @@ const AddTask = () => {
                     return <button
                         className={styles['add-button']}
                         onClick={() => { setActive(true) }}
-                    >+ ADD</button>
+                    >+ Add Task</button>
                 }
             })()}
 

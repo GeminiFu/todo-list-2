@@ -1,4 +1,11 @@
-.wrapper {}
+.wrapper {
+  width: 620px;
+
+  background: #F2F2F2;
+  box-shadow: 0 4px 4px 0 #C8C8C8;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
 .header {
   width: 620px;
@@ -6,18 +13,31 @@
 
   padding: 0 1.5rem;
 
-  background: #F2F2F2;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.completed {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  background: #FFFFFF;
+
+  margin: 0 1rem;
+  border-radius: 2px;
 }
 
 .title {
   width: 248px;
   height: 28px;
 
+  font-family: Roboto-Medium;
   font-size: 1.5rem;
+}
+
+.title::placeholder {
+  color: #000000;
 }
 
 .footer {
@@ -27,7 +47,7 @@
 
 .cancel,
 .add-todo {
-  width: 310px;
+  width: 50%;
   height: 60px;
 
   border: 0;

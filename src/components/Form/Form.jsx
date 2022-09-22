@@ -22,13 +22,13 @@ const Form = (props) => {
                 <div className={styles['header-left']}>
                     <input
                         type="checkbox"
-                        className='completed'
+                        className={styles['completed']}
                         onChange={e => { setTodo({ ...todo, completed: e.target.checked }) }}
                     />
                     <input
                         type="text"
                         className={styles['title']}
-                        placeholder='Type Something Here'
+                        placeholder='Type Something Here...'
                         onChange={e => {
                             setTodo({
                                 ...todo, title: e.target.value
